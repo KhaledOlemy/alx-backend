@@ -54,7 +54,6 @@ class Server:
         for key, value in data.items():
             if key >= starting_point and len(target_data) < page_size:
                 target_data.append(value)
-                continue
             if len(target_data) == page_size:
                 next_index = key
                 break
