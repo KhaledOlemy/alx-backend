@@ -19,9 +19,9 @@ class LRUCache(BaseCaching):
             self.cache_data[key] = item
             self.busy_keys.append(key)
         else:
-            self.busy_keys = [i for i in self.busy_keys if i in list(self.cache_data.keys())]
+            self.busy_keys = [i for i in self.busy_keys if i in
+                              list(self.cache_data.keys())]
             discarded_key = self.busy_keys[0]
-            self.busy_keys = self.busy_keys[1:]
             if self.cache_data.get(key):
                 self.cache_data[key] = item
                 self.busy_keys.remove(key)
@@ -35,5 +35,6 @@ class LRUCache(BaseCaching):
     def get(self, key):
         """Gets value from cache using key"""
         if key and self.cache_data.get(key):
+            self.busy_keys.remove(key)
             self.busy_keys.append(key)
             return self.cache_data.get(key)
