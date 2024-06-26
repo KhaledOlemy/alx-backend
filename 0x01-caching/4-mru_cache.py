@@ -5,7 +5,7 @@ from base_caching import BaseCaching
 
 class MRUCache(BaseCaching):
     """MRU Cache: Store with a maximum number of `MAX_ITEMS`
-    and usd MRU Caching technique, First In First Out"""
+    and usd MRU Caching technique, Most Recently Used"""
     def __init__(self):
         """Instance initializer"""
         super().__init__()

@@ -5,7 +5,7 @@ from base_caching import BaseCaching
 
 class LIFOCache(BaseCaching):
     """LIFO Cache: Store with a maximum number of `MAX_ITEMS`
-    and usd LIFO Caching technique, First In First Out"""
+    and usd LIFO Caching technique, Last In First Out"""
     def __init__(self):
         """Instance initializer"""
         super().__init__()
