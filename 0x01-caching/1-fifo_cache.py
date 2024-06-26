@@ -5,11 +5,11 @@ from base_caching import BaseCaching
 
 class FIFOCache(BaseCaching):
     def __init__(self):
-        """Instance initializer"""
+        """FIFO Cache: Instance initializer"""
         super().__init__()
 
     def put(self, key, item):
-        """Puts key:value pair in cache"""
+        """FIFO Cache: Puts key:value pair in cache"""
         if not key or not item:
             return
         if len(self.cache_data.items()) < BaseCaching.MAX_ITEMS:
@@ -21,6 +21,6 @@ class FIFOCache(BaseCaching):
             self.cache_data[key] = item
 
     def get(self, key):
-        """Gets value from cache using key"""
+        """FIFO Cache: Gets value from cache using key"""
         if key and self.cache_data.get(key):
             return self.cache_data.get(key)
