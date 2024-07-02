@@ -25,6 +25,7 @@ users = {
 
 
 def get_user():
+    """Get current user if passed as an arg"""
     login_as = request.args.get("login_as")
     if login_as:
         return users.get(int(login_as))
@@ -33,6 +34,7 @@ def get_user():
 
 @app.before_request
 def before_request():
+    """Get user param before receiving request"""
     user = get_user()
     g.user = user
 
