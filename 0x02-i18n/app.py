@@ -75,7 +75,7 @@ def get_timezone():
 @app.route("/")
 def homepage():
     """basic homepage function that renders basic html"""
-    g.time = format_datetime()
+    g.datetime = format_datetime()
     return render_template("index.html")
 
 
