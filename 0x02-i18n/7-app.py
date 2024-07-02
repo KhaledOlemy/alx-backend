@@ -75,8 +75,8 @@ def get_timezone():
 @app.route("/")
 def homepage():
     """basic homepage function that renders basic html"""
-    return render_template("6-index.html")
+    return render_template("7-index.html")
 
 
 if __name__ == "__main__":
-    app.run(host="0.0.0.0", port=5000, debug=True)
+    app.run(host="0.0.0.0", port=5000)
