@@ -25,7 +25,7 @@ def get_locale():
 @app.route("/")
 def homepage():
     """basic homepage function that renders basic html"""
-    return render_template("0-index.html")
+    return render_template("2-index.html")
 
 
 if __name__ == "__main__":
